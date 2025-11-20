@@ -39,8 +39,10 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       {/* Ajout de la navbar */}
-      
-      <IonRouterOutlet>
+      {/* ajout du paramètre id=main-content dans le IonRouterOutlet */}
+      {/* ajout du paramètre contentId=main-content dans la navbar */}
+
+      <IonRouterOutlet id='main-content'>
         <Route exact path="/home" component={Home}/>
         <Route exact path="/" render={()=> <Redirect to="/home" />} />
       </IonRouterOutlet>
