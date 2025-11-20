@@ -15,7 +15,7 @@ const Navbar : React.FC = () => {
 
         <IonContent>
             <IonAccordionGroup>
-                    <IonItem button color='dark'>
+                    <IonItem button  color='dark'>
                         <IonLabel onClick={()=> router.push("/")}>Home</IonLabel>
                     </IonItem>
                 <IonAccordion value="Todos">
@@ -41,11 +41,11 @@ const Navbar : React.FC = () => {
 
         <IonHeader>
             <IonToolbar color='dark'>
-                <IonButtons slot="end">
+                <IonButtons slot="start">
                     <IonMenuButton />
                 </IonButtons>
 
-                <IonButtons slot="start">
+                <IonButtons slot="end">
                     <IonButton onClick={()=> router.push('/')}> Accueil</IonButton>
                 </IonButtons>
 
