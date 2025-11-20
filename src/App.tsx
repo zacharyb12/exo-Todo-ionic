@@ -32,6 +32,8 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import Navbar from './components/navbar/Navbar';
+import TodoList from './pages/list/TodoList';
 
 setupIonicReact();
 
@@ -39,11 +41,13 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       {/* Ajout de la navbar */}
+      <Navbar/>
       {/* ajout du paramètre id=main-content dans le IonRouterOutlet */}
       {/* ajout du paramètre contentId=main-content dans la navbar */}
 
       <IonRouterOutlet id='main-content'>
         <Route exact path="/home" component={Home}/>
+        <Route exact path="/todo-list" component={TodoList} />
         <Route exact path="/" render={()=> <Redirect to="/home" />} />
       </IonRouterOutlet>
     </IonReactRouter>
